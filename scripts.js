@@ -47,3 +47,12 @@ document.getElementById("4").onclick = function () {
     }
     
 };
+
+document.getElementById("5").onclick = function () {
+    if (!!storedText) {
+        log.textContent = 'Liczba zdań to: ' + (storedText.match(/[\w|\)][.?!](\s|$)/g)|| []).length
+    } else {
+        log.textContent = 'Brak pliku!'
+    }
+    
+};
