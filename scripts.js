@@ -47,3 +47,12 @@ document.getElementById("4").onclick = function () {
     }
     
 };
+
+document.getElementById("8").onclick = function () {
+    if (!!storedText) {
+        window.close();
+    } else {
+        log.textContent = 'Brak pliku!'
+    }
+    
+};
