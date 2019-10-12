@@ -54,7 +54,28 @@ document.getElementById("5").onclick = function () {
     } else {
         log.textContent = 'Brak pliku!'
     }
-}
+
+};
+
+document.getElementById("6").onclick = function () {
+    if (!!storedText) {
+        var counts = {}
+        var ch, index, len, count;
+        log.textContent = ''
+        for (index = 0, len = storedText.length; index < len; ++index) {
+            ch = storedText.charAt(index); 
+            count = counts[ch];
+            counts[ch] = count ? count + 1 : 1;
+        }
+        for (char in counts) {
+            log.insertAdjacentHTML("beforeend",`${char}: ${counts[char]} <br>` ) 
+        }
+        
+    } else {
+        log.textContent = 'Brak pliku!'
+    }
+
+};
 
 document.getElementById("8").onclick = function () {
     window.close();
