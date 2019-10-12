@@ -27,3 +27,14 @@ document.getElementById("2").onclick = function () {
     }
     
 };
+
+document.getElementById("3").onclick = function () {
+    if (!!storedText) {
+        log.textContent = 'Liczba wyrazów to: ' + storedText.split(' ')
+        .filter(function(n) { return n != '' })
+        .length;
+    } else {
+        log.textContent = 'Brak pliku!'
+    }
+    
+};
