@@ -25,18 +25,18 @@ document.getElementById("2").onclick = function () {
     } else {
         log.textContent = 'Brak pliku!'
     }
-    
+
 };
 
 document.getElementById("3").onclick = function () {
     if (!!storedText) {
         log.textContent = 'Liczba wyrazów to: ' + storedText.split(' ')
-        .filter(function(n) { return n != '' })
-        .length;
+            .filter(function (n) { return n != '' })
+            .length;
     } else {
         log.textContent = 'Brak pliku!'
     }
-    
+
 };
 
 document.getElementById("4").onclick = function () {
@@ -45,14 +45,17 @@ document.getElementById("4").onclick = function () {
     } else {
         log.textContent = 'Brak pliku!'
     }
-    
+
 };
 
 document.getElementById("5").onclick = function () {
     if (!!storedText) {
-        log.textContent = 'Liczba zdań to: ' + (storedText.match(/[\w|\)][.?!](\s|$)/g)|| []).length
+        log.textContent = 'Liczba zdań to: ' + (storedText.match(/[\w|\)][.?!](\s|$)/g) || []).length
     } else {
         log.textContent = 'Brak pliku!'
     }
-    
-};
+}
+
+document.getElementById("8").onclick = function () {
+    window.close();
+}
