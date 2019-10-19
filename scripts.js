@@ -47,6 +47,7 @@ document.getElementById("download-file-btn").onclick = function () {
   }
 };
 
+
 document.getElementById("local-file-btn").onclick = function () {
   var file = fileInput.files[0]
   var reader = new FileReader()
@@ -64,12 +65,14 @@ document.getElementById("local-file-btn").onclick = function () {
 
 document.getElementById("2").onclick = function () {
   if (!!storedText) {
-    log.textContent = 'Liczba znakow to: ' + storedText.length
+    log.textContent = ''
+    log.insertAdjacentHTML("beforeend", `Liczba samogłosek: ${(storedText.match(/[eyoiaąęóu]/gi) || []).length} <br>`)
+    log.insertAdjacentHTML("beforeend", `Liczba spółgłosek: ${(storedText.match(/[qwrtpsdfghjklzxcvbnmłżźść]/gi) || []).length} <br>`)
   } else {
     log.textContent = 'Brak pliku!'
   }
-
-};
+}
+  
 
 document.getElementById("3").onclick = function () {
   if (!!storedText) {
