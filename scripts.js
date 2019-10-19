@@ -76,13 +76,11 @@ document.getElementById("2").onclick = function () {
 
 document.getElementById("3").onclick = function () {
   if (!!storedText) {
-    log.textContent = 'Liczba wyrazów to: ' + storedText.split(' ')
-      .filter(function (n) { return n != '' })
-      .length;
+    var words = storedText.split(' ').filter(function (n) { return n != '' && n.length > 1 }).length
+    log.textContent = 'Liczba wyrazów to: ' + words;
   } else {
     log.textContent = 'Brak pliku!'
   }
-
 };
 
 document.getElementById("4").onclick = function () {
