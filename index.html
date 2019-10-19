@@ -10,17 +10,40 @@
 </head>
 
 <body>
-  <button id = "1" class="button">1. Pobierz plik</button>
-  <button id ='2' class="button">2. Zlicz liczbę samogłosek i spółgłosek w pliku</button>
-  <button id ='3' class="button">3. Zlicz liczbę wyrazów w pliku</button>
-  <button id ='4' class="button">4. Zlicz liczbę znaków interpunkcyjnych w pliku</button>
-  <button id ='5' class="button">5. Zlicz liczbę zdań w pliku</button>
-  <button id ='6' class="button">6. Wygeneruj raport o użyciu liter (A-Z)</button>
-  <button id ='7' class="button">7. Zapisz statystyki z punktów 2-5 do pliku statystyki.txt</button>
-  <button id ='8' class="button">8. Wyjście z programu</button>
-  <div id ="log">
-    
+  <div id='file-download'>
+    <button id="1" class="block">1. Wybierz plik wejściowy</button>
+    <div id='file-chooser' class="none">
+      Pobrać plik z internetu?
+      <button id='choose-download-yes'>TAK</button>
+      <button id='choose-download-no'>NIE</button>
+      <div id='download-file' class="none">
+        <p>
+          Wybierz adres url, np 'https://s3.zylowski.net/public/input/8.txt'
+        </p>
+        <input id='url-input' type="text">
+        <button id='download-file-btn'>Ściągnij</button>
+      </div>
+      <div id='local-file' class="none">
+        <p>
+          Wybierz plik z dysku
+        </p>
+        <input id='file-input' type="file">
+        <button id='local-file-btn'>Potwierdź plik</button>
+      </div>
+    </div>
+  </div>
+
+  <button id='2' class="block">2. Zlicz liczbę liter w pobranym pliku</button>
+  <button id='3' class="block">3. Zlicz liczbę wyrazów w pliku</button>
+  <button id='4' class="block">4. Zlicz liczbę znaków interpunkcyjnych w pliku</button>
+  <button id='5' class="block">5. Zlicz liczbę zdań w pliku</button>
+  <button id='6' class="block">6. Wygeneruj raport o użyciu liter (A-Z)</button>
+  <button id='7' class="block">7. Zapisz statystyki z punktów 2-5 do pliku statystyki.txt</button>
+  <button id='8' class="block">8. Wyjście z programu</button>
+  <div id="log">
+
   </div>
 </body>
 <script src="scripts.js"></script>
+
 </html>
