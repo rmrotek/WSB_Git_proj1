@@ -72,11 +72,13 @@ document.getElementById("2").onclick = function () {
     log.textContent = 'Brak pliku!'
   }
 }
-  
+
 
 document.getElementById("3").onclick = function () {
   if (!!storedText) {
-    var words = storedText.split(' ').filter(function (n) { return n != '' && n.length > 1 }).length
+    var words = storedText.split(' ').filter(function (n) {
+      return n != '' && n.length > 1
+    }).length
     log.textContent = 'Liczba wyrazów to: ' + words;
   } else {
     log.textContent = 'Brak pliku!'
@@ -85,7 +87,7 @@ document.getElementById("3").onclick = function () {
 
 document.getElementById("4").onclick = function () {
   if (!!storedText) {
-    log.textContent = 'Liczba znaków interpunkcyjnych to: ' + (storedText.match(/[,.!@#$%^&*()]/g) || []).length;
+    log.textContent = 'Liczba znaków interpunkcyjnych to: ' + (storedText.match(/[.?]/g) || []).length;
   } else {
     log.textContent = 'Brak pliku!'
   }
@@ -93,11 +95,11 @@ document.getElementById("4").onclick = function () {
 };
 
 document.getElementById("5").onclick = function () {
-    if (!!storedText) {
-        log.textContent = 'Liczba zdań to: ' + (storedText.match(/[\w|\)][.?](\s|$)/g) || []).length
-    } else {
-        log.textContent = 'Brak pliku!'
-    }
+  if (!!storedText) {
+    log.textContent = 'Liczba zdań to: ' + (storedText.match(/[\w|\)][.?](\s|$)/g) || []).length
+  } else {
+    log.textContent = 'Brak pliku!'
+  }
 
 };
 
